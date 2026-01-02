@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="200" y="25" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold">Reflexive Graph Schema</text>
+  <text x="200" y="45" text-anchor="middle" font-family="serif" font-size="12" font-style="italic">Sch(ReflGraph) = {E ⇉ V, V → E}</text>
+  
+  <!-- Vertices: E and V -->
+  <circle cx="120" cy="120" r="30" fill="#e8f4f8" stroke="#333" stroke-width="2"/>
+  <text x="120" y="125" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold">E</text>
+  
+  <circle cx="280" cy="120" r="30" fill="#f4e8f8" stroke="#333" stroke-width="2"/>
+  <text x="280" y="125" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold">V</text>
+  
+  <!-- src arrow (top) -->
+  <path d="M150,105 Q200,70 250,105" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="200" y="80" text-anchor="middle" font-family="serif" font-size="14">src</text>
+  
+  <!-- tgt arrow (bottom) -->
+  <path d="M150,135 Q200,170 250,135" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="200" y="175" text-anchor="middle" font-family="serif" font-size="14">tgt</text>
+  
+  <!-- refl arrow (V → E, going back) -->
+  <path d="M255,95 Q200,50 145,95" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="200" y="45" text-anchor="middle" font-family="serif" font-size="14" fill="#2563eb">refl</text>
+</svg>

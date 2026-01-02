@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220">
+  <!-- Title -->
+  <text x="250" y="30" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold">Reflexive Graph Equations</text>
+  
+  <!-- Box for equations -->
+  <rect x="50" y="50" width="400" height="150" fill="#fafafa" stroke="#333" stroke-width="1" rx="8"/>
+  
+  <!-- Equation 1: src ∘ refl = id_V -->
+  <text x="250" y="90" text-anchor="middle" font-family="serif" font-size="18">src ∘ refl = id<tspan baseline-shift="sub" font-size="12">V</tspan></text>
+  
+  <!-- Equation 2: tgt ∘ refl = id_V -->
+  <text x="250" y="130" text-anchor="middle" font-family="serif" font-size="18">tgt ∘ refl = id<tspan baseline-shift="sub" font-size="12">V</tspan></text>
+  
+  <!-- Explanation -->
+  <text x="250" y="175" text-anchor="middle" font-family="serif" font-size="12" font-style="italic" fill="#666">"Every vertex has a self-loop: refl(v) is an edge from v to v"</text>
+</svg>

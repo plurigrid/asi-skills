@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 300">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="225" y="30" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold">Naturality Square for C-Set Homomorphisms</text>
+  
+  <!-- Top-left: X(c) -->
+  <text x="100" y="100" text-anchor="middle" font-family="serif" font-size="18">X(c)</text>
+  
+  <!-- Top-right: X(c') -->
+  <text x="350" y="100" text-anchor="middle" font-family="serif" font-size="18">X(c')</text>
+  
+  <!-- Bottom-left: Y(c) -->
+  <text x="100" y="220" text-anchor="middle" font-family="serif" font-size="18">Y(c)</text>
+  
+  <!-- Bottom-right: Y(c') -->
+  <text x="350" y="220" text-anchor="middle" font-family="serif" font-size="18">Y(c')</text>
+  
+  <!-- Top arrow: X(f) -->
+  <line x1="130" y1="95" x2="310" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="220" y="85" text-anchor="middle" font-family="serif" font-size="14">X(f)</text>
+  
+  <!-- Bottom arrow: Y(f) -->
+  <line x1="130" y1="215" x2="310" y2="215" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="220" y="245" text-anchor="middle" font-family="serif" font-size="14">Y(f)</text>
+  
+  <!-- Left arrow: α_c -->
+  <line x1="100" y1="115" x2="100" y2="195" stroke="#2563eb" stroke-width="2" marker-end="url(#arrBlue)"/>
+  <text x="75" y="160" text-anchor="middle" font-family="serif" font-size="14" fill="#2563eb">α<tspan baseline-shift="sub" font-size="10">c</tspan></text>
+  
+  <!-- Right arrow: α_c' -->
+  <line x1="350" y1="115" x2="350" y2="195" stroke="#2563eb" stroke-width="2" marker-end="url(#arrBlue)"/>
+  <text x="380" y="160" text-anchor="middle" font-family="serif" font-size="14" fill="#2563eb">α<tspan baseline-shift="sub" font-size="10">c'</tspan></text>
+  
+  <!-- Commutes label -->
+  <text x="225" y="160" text-anchor="middle" font-family="serif" font-size="12" fill="#666">commutes</text>
+  
+  <!-- Equation at bottom -->
+  <text x="225" y="280" text-anchor="middle" font-family="serif" font-size="14">α<tspan baseline-shift="sub" font-size="10">c'</tspan> ∘ X(f) = Y(f) ∘ α<tspan baseline-shift="sub" font-size="10">c</tspan></text>
+</svg>

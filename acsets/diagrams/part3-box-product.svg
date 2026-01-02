@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+    <marker id="arwDash" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="250" y="30" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold">Box Product G □ H for Reflexive Graphs</text>
+  
+  <!-- G □ H at top -->
+  <rect x="200" y="60" width="100" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="250" y="85" text-anchor="middle" font-family="serif" font-size="16">G □ H</text>
+  
+  <!-- G at bottom-left -->
+  <rect x="80" y="180" width="80" height="40" fill="#f4e8f8" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="120" y="205" text-anchor="middle" font-family="serif" font-size="16">G</text>
+  
+  <!-- H at bottom-right -->
+  <rect x="340" y="180" width="80" height="40" fill="#f8f4e8" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="380" y="205" text-anchor="middle" font-family="serif" font-size="16">H</text>
+  
+  <!-- Projection arrows -->
+  <line x1="210" y1="100" x2="140" y2="175" stroke="#333" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="160" y="135" text-anchor="middle" font-family="serif" font-size="14">π<tspan baseline-shift="sub" font-size="10">G</tspan></text>
+  
+  <line x1="290" y1="100" x2="360" y2="175" stroke="#333" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="340" y="135" text-anchor="middle" font-family="serif" font-size="14">π<tspan baseline-shift="sub" font-size="10">H</tspan></text>
+  
+  <!-- X at very top -->
+  <rect x="200" y="260" width="100" height="40" fill="#e8f8e8" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="250" y="285" text-anchor="middle" font-family="serif" font-size="16">X</text>
+  
+  <!-- Universal property arrows from X -->
+  <line x1="210" y1="260" x2="140" y2="225" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arwDash)"/>
+  <text x="150" y="255" text-anchor="middle" font-family="serif" font-size="12" fill="#888">f</text>
+  
+  <line x1="290" y1="260" x2="360" y2="225" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arwDash)"/>
+  <text x="350" y="255" text-anchor="middle" font-family="serif" font-size="12" fill="#888">g</text>
+  
+  <!-- Unique morphism -->
+  <line x1="250" y1="260" x2="250" y2="105" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arw)"/>
+  <text x="270" y="180" text-anchor="middle" font-family="serif" font-size="12" fill="#2563eb">∃! ⟨f,g⟩</text>
+  
+  <!-- Formula at bottom -->
+  <text x="250" y="330" text-anchor="middle" font-family="serif" font-size="13">(G □ H)(c) = G(c) × H(c) with (g,h) ~ (g',h') via reflexive structure</text>
+</svg>

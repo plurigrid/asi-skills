@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 300">
+  <title>Rotation System Schema</title>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+    <marker id="bluearrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3B82F6"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="225" y="25" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#333">Rotation System: Combinatorial Surface Embedding</text>
+  
+  <!-- Objects -->
+  <circle cx="120" cy="150" r="40" fill="#F97316" stroke="#C2410C" stroke-width="2"/>
+  <text x="120" y="155" text-anchor="middle" fill="white" font-family="serif" font-size="24" font-weight="bold">H</text>
+  
+  <circle cx="330" cy="150" r="40" fill="#10B981" stroke="#047857" stroke-width="2"/>
+  <text x="330" y="155" text-anchor="middle" fill="white" font-family="serif" font-size="24" font-weight="bold">V</text>
+  
+  <!-- vertex morphism -->
+  <path d="M165,150 L285,150" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="225" y="140" text-anchor="middle" font-family="serif" font-size="14">vertex</text>
+  
+  <!-- inv morphism (left loop) -->
+  <path d="M95,110 C50,60 50,240 95,190" fill="none" stroke="#EF4444" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="35" y="150" text-anchor="middle" font-family="serif" font-size="14" fill="#EF4444">inv</text>
+  
+  <!-- σ morphism (right loop) - rotation -->
+  <path d="M145,110 C190,60 190,240 145,190" fill="none" stroke="#3B82F6" stroke-width="2" marker-end="url(#bluearrow)"/>
+  <text x="205" y="85" text-anchor="middle" font-family="serif" font-size="14" fill="#3B82F6">σ</text>
+  
+  <!-- Equations -->
+  <text x="225" y="235" text-anchor="middle" font-family="monospace" font-size="11" fill="#666">inv ∘ inv = id_H</text>
+  <text x="225" y="255" text-anchor="middle" font-family="monospace" font-size="11" fill="#3B82F6">σ : cyclic permutation around each vertex</text>
+  <text x="225" y="275" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">Orbits of σ ∘ inv = faces of embedded graph</text>
+  <text x="225" y="292" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">V - E + F = 2 (Euler characteristic for sphere)</text>
+</svg>

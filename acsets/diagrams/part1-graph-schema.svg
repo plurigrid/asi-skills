@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <title>Graph Schema: Sch(Graph) = {E ⇉ V}</title>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Objects -->
+  <circle cx="100" cy="100" r="30" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+  <text x="100" y="105" text-anchor="middle" fill="white" font-family="serif" font-size="20" font-weight="bold">E</text>
+  
+  <circle cx="300" cy="100" r="30" fill="#10B981" stroke="#047857" stroke-width="2"/>
+  <text x="300" y="105" text-anchor="middle" fill="white" font-family="serif" font-size="20" font-weight="bold">V</text>
+  
+  <!-- Morphisms -->
+  <path d="M135,85 Q200,50 265,85" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="200" y="55" text-anchor="middle" font-family="serif" font-size="14">src</text>
+  
+  <path d="M135,115 Q200,150 265,115" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="200" y="165" text-anchor="middle" font-family="serif" font-size="14">tgt</text>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#666">Schema Sch(Graph): E = Edges, V = Vertices</text>
+</svg>
