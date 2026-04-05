@@ -302,6 +302,73 @@ cd medley
 ./run-medley
 ```
 
+## The Scheme Genealogy: Cowan-Jaffer Lineage
+
+Interlisp's environment-as-persistent-object philosophy resurfaces in the Scheme
+ecosystem through Aubrey Jaffer's **SCM** and **SLIB** -- the oldest living
+independent Scheme implementation and its portable library.
+
+### The Cowan View of Jaffer
+
+John Cowan's relationship to Jaffer's work reveals deference on proven design:
+- **SRFI-151** (bitwise ops): Cowan chose Jaffer's SRFI-60 argument ordering over
+  Olin Shivers' SRFI-33, reasoning "SLIB and R6RS have seen far more usage than
+  SRFI 33." Adoption evidence over committee aesthetics.
+- **SCM as canonical test subject**: Cowan's exhaustive Scheme implementation surveys
+  (~45 implementations) always include SCM. He tracks where it diverges: "all the
+  usual Schemes except SCM and SSCM accept them." SCM is the baseline for "what
+  does the oldest living independent Scheme do?"
+- **Guile's origin**: SCM is Guile's ancestor -- Andy Wingo documented "in the
+  beginning it was all Aubrey Jaffer's SCM, just packaged as a library" (~1993).
+  Jaffer's implementation decisions propagate through Guile into Cowan's R7RS-large
+  work indirectly.
+
+### R6RS Split
+
+Jaffer voted NO, Cowan voted YES. Different dispositions toward standardization:
+Jaffer trusts his own implementations over committee output; Cowan trusts "good
+enough" consensus. Both approaches valid -- the tension is productive.
+
+### SLIB as Latent Synesthetic Functor
+
+Jaffer's SLIB modules already contain the pieces of a **synesthetic functor**
+scattered across modules that have never imported each other:
+
+| SLIB Module | Domain | Synesthetic Relevance |
+|-------------|--------|----------------------|
+| `colorspace.scm` | CIE XYZ/RGB/HSL | color-as-value |
+| `random.scm` / SRFI-60 | RNG + bit-field extraction | identity→sensory decomposition, **GF(3)** |
+| `modular.scm` | Modular arithmetic | Mertens function territory |
+| `factor.scm` | Integer factorization | visual output-as-value |
+| `charplot.scm` | Terminal plotting | ChromaticEnv as array |
+| `array.scm` / SRFI-63 | Multi-dimensional arrays | embeddability (nanoclj-zig's goal) |
+| `batch.scm` | Portable system interface | execution substrate |
+
+**Key observation**: `colorspace.scm` doesn't call `random.scm`, `random.scm`
+doesn't feed into `modular.scm`. The modules exist in the same distribution but
+form an **archipelago**. When you collapse that SLIB archipelago into a single
+composition:
+
+```
+GF(3) (modular) → Color (colorspace) → Array (charplot) → Value
+```
+
+you recover the synesthetic functor that maps algebraic structure to perceptual
+output -- the same structure that `gay-julia` and `chromatic-walk` implement from
+the category-theoretic side.
+
+### Interlisp ↔ SCM/SLIB Bridge
+
+The connection is structural, not historical:
+
+| Interlisp Concept | SCM/SLIB Analogue | Categorical Bridge |
+|-------------------|-------------------|-------------------|
+| DWIM | SLIB's `require` auto-loading | Left adjoint to module lookup |
+| Masterscope | SLIB's cross-module dependency | Functorial dependency graph |
+| Programmer's Assistant | SCM's `transcript-on`/`transcript-off` | Edit history monad |
+| CLISP syntax | SLIB's `defmacro` + syntax-rules | Algebraic rewriting |
+| ADVISE | SLIB's `trace`/`break` | Aspect-oriented wrapping |
+
 ## GF(3) Triads
 
 | Triad | Role |
@@ -309,6 +376,7 @@ cd medley
 | lispsyntax-acset (-1) ⊗ interlisp (0) ⊗ free-monad-gen (+1) | Interactive DSL |
 | interaction-nets (-1) ⊗ interlisp (0) ⊗ specter-acset (+1) | Evaluation Bridge |
 | structured-decompositions (-1) ⊗ interlisp (0) ⊗ algebraic-rewriting (+1) | DWIM Correction |
+| chromatic-walk (-1) ⊗ interlisp (0) ⊗ gay-julia (+1) | SLIB Synesthetic Functor |
 
 ## References
 
@@ -319,6 +387,10 @@ cd medley
 - [Medley Interlisp Project](https://interlisp.org) - Modern open-source revival
 - [Interlisp/medley](https://github.com/Interlisp/medley) - GitHub repository
 - Bobrow, D. & Stefik, M. "The LOOPS Manual" (1983) - Object system
+- Jaffer, A. "SLIB - The Portable Scheme Library"
+- Jaffer, A. "SCM - Scheme Implementation"
+- Cowan, J. "R7RS-large" - Scheme standardization (Red/Tangerine editions)
+- Wingo, A. "A Brief History of Guile" - SCM as Guile's ancestor
 
 ## Scientific Skill Interleaving
 
