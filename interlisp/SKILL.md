@@ -323,6 +323,39 @@ John Cowan's relationship to Jaffer's work reveals deference on proven design:
   Jaffer's implementation decisions propagate through Guile into Cowan's R7RS-large
   work indirectly.
 
+### SCM Complex Number Predicates
+
+SCM's numerical tower: exact integers, inexact reals, inexact complexes -- but
+**no exact rationals**. Complex support is bundled with the `inexact` feature flag
+(not a separate `COMPLEXES` toggle). Jaffer's position from SRFI-70: "experience
+with SCM shows that the R5RS number system can work well without exact rational
+non-integers." Exactness over type as the organizing principle.
+
+```scheme
+;; SCM predicate behavior (R5RS tower hierarchy)
+(complex? 3+4i)      ;=> #t
+(complex? 3)         ;=> #t   ; integers are complex (tower inclusion)
+(complex? 2.5)       ;=> #t   ; reals are complex
+(real? -2.5+0.0i)    ;=> #t   ; zero imaginary part collapses
+(real? 3+4i)         ;=> #f
+(integer? 3+0i)      ;=> #t   ; exact integer despite complex literal
+(rational? 1/3)      ;=> #f   ; SCM diverges: no exact rationals!
+(rational? +inf.0)   ;=> #f   ; infinities are not rational (SRFI-70)
+(exact? 42)          ;=> #t
+(exact? 3.14)        ;=> #f
+(inexact? 3+4i)      ;=> #t   ; complex numbers always inexact in SCM
+```
+
+This is where SCM diverges from "all the usual Schemes" in Cowan's surveys --
+most Schemes accept exact rationals; SCM and SSCM do not. The `single-precision-only`
+build flag "does not affect complex numbers," preserving complex arithmetic even
+in embedded/constrained builds.
+
+The connection to SLIB's `colorspace.scm` is structural: CIE XYZ coordinates are
+inherently complex-valued in the chromaticity plane. SCM's inexact complex tower
+is the *natural numeric substrate* for color computation -- the type system already
+encodes the dimensionality that `colorspace.scm` needs.
+
 ### R6RS Split
 
 Jaffer voted NO, Cowan voted YES. Different dispositions toward standardization:
@@ -391,6 +424,9 @@ The connection is structural, not historical:
 - Jaffer, A. "SCM - Scheme Implementation"
 - Cowan, J. "R7RS-large" - Scheme standardization (Red/Tangerine editions)
 - Wingo, A. "A Brief History of Guile" - SCM as Guile's ancestor
+- Jaffer, A. "SRFI-70: Numbers" - Infinities, exactness, SCM predicate semantics
+- Cowan, J. "Numeric Tower Survey" - docs.scheme.org/surveys/numeric-tower/
+- Cowan, J. "Complex Representations Survey" - docs.scheme.org/surveys/complex-representations/
 
 ## Scientific Skill Interleaving
 
