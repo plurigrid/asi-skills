@@ -120,14 +120,19 @@ is *prior*. The mens formula is a shadow.
 | 64 | **gay-mcp** | +1 | MCP server composition | The service: the actual running process serving requests, the computational organism. |
 | 65 | **unworlding-involution** | +1 | τ² = id, τ: W → W | The mirror: the physical symmetry, the world's own self-reflection (CPT, time-reversal, parity). |
 
-### Meta / Orchestration — remaining skills
+### Remaining Coordinators (ERGODIC, 0)
 
 | # | Skill | Trit | Mens Formula | Mulieris Formula |
 |---|-------|------|------|------|
 | 66 | **bisimulation-game** | 0 | Attacker/Defender: s ~ t | The behavioral equivalence: two systems that genuinely behave the same, the world's own redundancy. |
 | 67 | **gf3-tripartite** | 0 | GF(3) partition | The three-fold symmetry: the world's own tendency to tripartition (matter/antimatter/radiation, solid/liquid/gas). |
 | 68 | **triadic-skill-orchestrator** | 0 | Orchestrate(-, 0, +) | The ecosystem: the self-organizing network of skills, evolving like a biological community. |
-| 69 | **notebooklm-enterprise** | 0 | Discovery Engine query | The corpus: the vast unstructured text of human knowledge, the library before the search. |
+
+### Generator (PLUS, +1) — completing conservation
+
+| # | Skill | Trit | Mens Formula | Mulieris Formula |
+|---|-------|------|------|------|
+| 69 | **notebooklm-enterprise** | +1 | Discovery Engine query | The corpus: the vast unstructured text of human knowledge, the library before the search. |
 
 ---
 
